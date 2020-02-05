@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChocolateChipProjectile : MonoBehaviour
+public class SugarProjectile : MonoBehaviour
 {
     [SerializeField]
     private Vector3 mTrajectory;
@@ -18,25 +18,25 @@ public class ChocolateChipProjectile : MonoBehaviour
         mTrajectory = new Vector3(mMousePos.x - startPos.x, mMousePos.y - startPos.y).normalized;
 
 
-        mSpeed = .1f;
-        Destroy(gameObject, 1f);
+        mSpeed = .3f;
+        Destroy(gameObject, .1f);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += mTrajectory.normalized * mSpeed;  
+        transform.position += mTrajectory.normalized * mSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Enemy")
+        if (collision.tag == "Enemy")
         {
             Destroy(gameObject);
             collision.GetComponent<EnemyHealth>().DealDamage(1);
         }
-        else if(collision.tag == "Player")
+        else if (collision.tag == "Player")
         {
             //Do Nothing
         }
