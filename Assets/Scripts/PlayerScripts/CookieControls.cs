@@ -26,6 +26,17 @@ public class CookieControls : MonoBehaviour
     [SerializeField]
     private GameObject mCookie2;
 
+
+    [SerializeField]
+    private GameObject mSugarProjectile;
+    [SerializeField]
+    private GameObject mChipProjectile;
+
+   
+
+
+    [SerializeField]
+    private Vector3 mTrajectory;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,10 +57,32 @@ public class CookieControls : MonoBehaviour
 
         mRigidBody.AddForce(mMovement);
 
+       
+
+
+
+
         //Mouse click functionality
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("Click");
+         
+
+            switch (mSelectedCookie)
+            {
+                case 0:
+
+                    break;
+                case 1:
+                    Instantiate(mSugarProjectile, transform);
+                    break;
+                case 2:
+                    Instantiate(mChipProjectile, transform);
+                    break;
+                default:
+                    Debug.Log("mSelectedCookie Error");
+                    break;
+            }
         }
 
         //Cookie Switching functionality
@@ -64,9 +97,27 @@ public class CookieControls : MonoBehaviour
             ValidateBounds();
         }
 
-
-
-        
+        switch (mSelectedCookie)
+        {
+            case 0:
+                mCookie0.SetActive(true);
+                mCookie1.SetActive(false);
+                mCookie2.SetActive(false);
+                break;
+            case 1:
+                mCookie0.SetActive(false);
+                mCookie1.SetActive(true);
+                mCookie2.SetActive(false);
+                break;
+            case 2:
+                mCookie0.SetActive(false);
+                mCookie1.SetActive(false);
+                mCookie2.SetActive(true);
+                break;
+            default:
+                Debug.Log("mSelectedCookie is incorrect");
+                break;
+        }
     }
 
     private void ValidateBounds()
