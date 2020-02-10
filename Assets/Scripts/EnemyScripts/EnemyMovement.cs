@@ -53,7 +53,6 @@ public class EnemyMovement : MonoBehaviour
         }
         if ((mLastKnownPos - transform.position).sqrMagnitude < 2)
         {
-            Debug.Log("Target Reached");
             mLastKnownPos = new Vector3(0, 0, 0);
         }
     }

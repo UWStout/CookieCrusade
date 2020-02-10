@@ -32,7 +32,7 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Hit");
-            int knockbackForce = 5000;
+            int knockbackForce = 3000;
             collision.gameObject.GetComponent<CookieHealth>().DealDamage(1);
             Vector3 knockbackDirection = collision.transform.position - transform.position;
             Vector2 knockback = new Vector2(knockbackDirection.x, knockbackDirection.y);
