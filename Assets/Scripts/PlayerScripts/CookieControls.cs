@@ -70,12 +70,15 @@ public class CookieControls : MonoBehaviour
 
             switch (mSelectedCookie)
             {
+                //Monster Cookie
                 case 0:
 
                     break;
+                //Sugar Cookie
                 case 1:
                     Instantiate(mSugarProjectile, transform);
                     break;
+                //Chocolate Chip Cookie
                 case 2:
                     Instantiate(mChipProjectile, transform);
                     break;
