@@ -49,7 +49,7 @@ public class Dungeon : MonoBehaviour
 
             for(int tries = 0; tries < maxTriesPerRoom; tries++){
                 Vector2Int newPosition = new Vector2Int(Random.Range(0, mapDimensions.x), Random.Range(0, mapDimensions.y));
-                if (CheckSpotAvailable(newPosition, worldTile.Dimensions){
+                if (CheckSpotAvailable(newPosition, worldTile.Dimensions)){
                     AddTileToMap(worldTile, newPosition);
                     break;
                 }
