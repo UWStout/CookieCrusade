@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class CookieControls : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class CookieControls : MonoBehaviour
     [SerializeField]
     private GameObject mCookie2;
 
+    private bool mPlayerAttacks = false;
+    [SerializeField]
+    private RuntimeAnimatorController mAnim;
+
 
     [SerializeField]
     private GameObject mSugarProjectile;
@@ -40,7 +45,9 @@ public class CookieControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
         mSelectedCookie = 0;
+        
         mRigidBody = GetComponent<Rigidbody2D>();
         if (mSpeed == 0)
         {
@@ -54,14 +61,11 @@ public class CookieControls : MonoBehaviour
         xInput = Input.GetAxis("Horizontal");
         yInput = Input.GetAxis("Vertical");
         mMovement = new Vector2(xInput * mSpeed, yInput * mSpeed);
+        
 
         mRigidBody.AddForce(mMovement);
 
-       
-
-
-
-
+      
         //Mouse click functionality
         if (Input.GetMouseButtonDown(0))
         {
