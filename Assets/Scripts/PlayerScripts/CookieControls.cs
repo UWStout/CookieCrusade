@@ -29,8 +29,7 @@ public class CookieControls : MonoBehaviour
 
     private bool mPlayerAttacks = false;
     [SerializeField]
-    private RuntimeAnimatorController mAnim;
-
+    private Animator mAnim;
 
     [SerializeField]
     private GameObject mSugarProjectile;
@@ -45,7 +44,7 @@ public class CookieControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        mAnim = GetComponent<Animator>();
         mSelectedCookie = 0;
         
         mRigidBody = GetComponent<Rigidbody2D>();
@@ -61,6 +60,8 @@ public class CookieControls : MonoBehaviour
         xInput = Input.GetAxis("Horizontal");
         yInput = Input.GetAxis("Vertical");
         mMovement = new Vector2(xInput * mSpeed, yInput * mSpeed);
+        mAnim.SetFloat("BlendX", xInput);
+        mAnim.SetFloat("BlendY", yInput);
         
 
         mRigidBody.AddForce(mMovement);
@@ -69,21 +70,23 @@ public class CookieControls : MonoBehaviour
         //Mouse click functionality
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Click");
+           
          
 
             switch (mSelectedCookie)
             {
                 //Monster Cookie
                 case 0:
-
+                    mAnim.SetBool("PlayerAttacks", true);
                     break;
                 //Sugar Cookie
                 case 1:
+                    mAnim.SetBool("PlayerAttacks", true);
                     Instantiate(mSugarProjectile, transform);
                     break;
                 //Chocolate Chip Cookie
                 case 2:
+                    mAnim.SetBool("PlayerAttacks", true);
                     Instantiate(mChipProjectile, transform);
                     break;
                 default:
@@ -96,11 +99,13 @@ public class CookieControls : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             mSelectedCookie--;
+            mAnim.SetInteger("SelectedCookie", mSelectedCookie);
             ValidateBounds();
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
             mSelectedCookie++;
+            mAnim.SetInteger("SelectedCookie", mSelectedCookie);
             ValidateBounds();
         }
 
