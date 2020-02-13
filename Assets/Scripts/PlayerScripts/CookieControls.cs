@@ -20,12 +20,12 @@ public class CookieControls : MonoBehaviour
     [SerializeField]
     private int mSelectedCookie;
 
-    [SerializeField]
+    /*[SerializeField]
     private GameObject mCookie0;
     [SerializeField]
     private GameObject mCookie1;
     [SerializeField]
-    private GameObject mCookie2;
+    private GameObject mCookie2;*/
 
     private bool mPlayerAttacks = false;
     [SerializeField]
@@ -46,6 +46,7 @@ public class CookieControls : MonoBehaviour
     {
         mAnim = GetComponent<Animator>();
         mSelectedCookie = 0;
+
         
         mRigidBody = GetComponent<Rigidbody2D>();
         if (mSpeed == 0)
@@ -60,9 +61,41 @@ public class CookieControls : MonoBehaviour
         xInput = Input.GetAxis("Horizontal");
         yInput = Input.GetAxis("Vertical");
         mMovement = new Vector2(xInput * mSpeed, yInput * mSpeed);
-        mAnim.SetFloat("BlendX", xInput);
-        mAnim.SetFloat("BlendY", yInput);
-        
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            mAnim.SetFloat("BlendY", 1);
+            mAnim.SetFloat("BlendX", 0);
+
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            mAnim.SetFloat("BlendY", -1);
+            mAnim.SetFloat("BlendX", 0);
+
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            mAnim.SetFloat("BlendX", 1);
+            mAnim.SetFloat("BlendY", 0);
+
+        }
+        else if (Input.GetKeyDown(KeyCode.A))
+        {
+            mAnim.SetFloat("BlendX", -1);
+            mAnim.SetFloat("BlendY", 0);
+        }
+
+        if(mMovement.magnitude == 0)
+        {
+            mAnim.SetBool("IsIdle", true);
+        }
+        else
+        {
+            mAnim.SetBool("IsIdle", false);
+        }
+       
+       
 
         mRigidBody.AddForce(mMovement);
 
