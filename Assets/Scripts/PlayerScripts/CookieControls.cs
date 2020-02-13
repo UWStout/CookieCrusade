@@ -99,16 +99,18 @@ public class CookieControls : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             mSelectedCookie--;
-            mAnim.SetInteger("SelectedCookie", mSelectedCookie);
             ValidateBounds();
+            mAnim.SetInteger("SelectedCookie", mSelectedCookie);
+            Debug.Log("Selected Cookie: " + mSelectedCookie);
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
             mSelectedCookie++;
-            mAnim.SetInteger("SelectedCookie", mSelectedCookie);
             ValidateBounds();
+            Debug.Log("Selected Cookie: " + mSelectedCookie);
+            mAnim.SetInteger("SelectedCookie", mSelectedCookie);
         }
-
+        /*
         switch (mSelectedCookie)
         {
             case 0:
@@ -129,7 +131,7 @@ public class CookieControls : MonoBehaviour
             default:
                 Debug.Log("mSelectedCookie is incorrect");
                 break;
-        }
+        }*/
     }
 
     private void ValidateBounds()
