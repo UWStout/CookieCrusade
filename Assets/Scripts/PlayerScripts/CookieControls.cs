@@ -65,12 +65,22 @@ public class CookieControls : MonoBehaviour
 
         mRigidBody.AddForce(mMovement);
 
-      
+
+        
         //Mouse click functionality
         if (Input.GetMouseButtonDown(0))
         {
-           
-         
+            Vector3 mousePos = Input.mousePosition;
+            Vector3 startPos = Camera.main.WorldToScreenPoint(transform.position);
+            mTrajectory = new Vector3(mousePos.x - startPos.x, mousePos.y - startPos.y).normalized;
+            if(mTrajectory.y > 0)
+            {
+                mAnim.SetFloat("AimY", 1);
+            }
+            else
+            {
+                mAnim.SetFloat("AimY", -1);
+            }
 
             switch (mSelectedCookie)
             {
