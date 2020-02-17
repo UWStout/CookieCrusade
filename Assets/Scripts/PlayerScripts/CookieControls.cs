@@ -20,6 +20,9 @@ public class CookieControls : MonoBehaviour
     [SerializeField]
     private int mSelectedCookie;
 
+    [SerializeField]
+    private GameObject mAttackArea;
+
     /*[SerializeField]
     private GameObject mCookie0;
     [SerializeField]
@@ -65,14 +68,18 @@ public class CookieControls : MonoBehaviour
 
         mRigidBody.AddForce(mMovement);
 
+        //Monster Cookie Attack Area Rotation
+        Vector3 mousePos = Input.mousePosition;
+        Vector3 startPos = Camera.main.WorldToScreenPoint(transform.position);
+        mTrajectory = new Vector3(mousePos.x - startPos.x, mousePos.y - startPos.y).normalized;
+      
 
-        
+
+
         //Mouse click functionality
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 mousePos = Input.mousePosition;
-            Vector3 startPos = Camera.main.WorldToScreenPoint(transform.position);
-            mTrajectory = new Vector3(mousePos.x - startPos.x, mousePos.y - startPos.y).normalized;
+         
             if(mTrajectory.y > 0)
             {
                 mAnim.SetFloat("AimY", 1);

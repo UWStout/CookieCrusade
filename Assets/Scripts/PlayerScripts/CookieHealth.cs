@@ -31,7 +31,7 @@ public class CookieHealth : MonoBehaviour
     {
         if(mHitPoints <= 0)
         {
-            GetComponent<Animator>().SetBool("isDead", true);
+            GetComponent<Animator>().SetBool("hasDied", true);
             //Extra Game Over Functionality
         }
 
