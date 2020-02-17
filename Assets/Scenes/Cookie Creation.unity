@@ -875,8 +875,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 207.5}
-  m_SizeDelta: {x: -650, y: -435}
+  m_AnchoredPosition: {x: 0, y: 257.5}
+  m_SizeDelta: {x: -650, y: -535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &959977909
 MonoBehaviour:
@@ -1439,6 +1439,7 @@ GameObject:
   - component: {fileID: 1637876907}
   - component: {fileID: 1637876908}
   - component: {fileID: 1637876909}
+  - component: {fileID: 1637876910}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1605,6 +1606,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1637876910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637876902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a3de0f112f52ae419c4dcf953329409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterCookie: {fileID: -5396317451220183507, guid: 79c7537f54f053f41956813e63718414,
+    type: 3}
+  sugarCookie: {fileID: -3663148221627053860, guid: 8b09eec6d589c8344a43e9e0313847b2,
+    type: 3}
+  chocolateChipCookie: {fileID: -8668534338779323616, guid: db8e3e7f137d0574b8dac01c21863585,
+    type: 3}
+  prev: {fileID: 1144541453}
+  next: {fileID: 771050654}
 --- !u!1 &1700719340
 GameObject:
   m_ObjectHideFlags: 0
