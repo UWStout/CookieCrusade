@@ -36,8 +36,6 @@ public class CookieControls : MonoBehaviour
     [SerializeField]
     private GameObject mChipProjectile;
 
-   
-
 
     [SerializeField]
     private Vector3 mTrajectory;
@@ -61,41 +59,9 @@ public class CookieControls : MonoBehaviour
         xInput = Input.GetAxis("Horizontal");
         yInput = Input.GetAxis("Vertical");
         mMovement = new Vector2(xInput * mSpeed, yInput * mSpeed);
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            mAnim.SetFloat("BlendY", 1);
-            mAnim.SetFloat("BlendX", 0);
-
-        }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            mAnim.SetFloat("BlendY", -1);
-            mAnim.SetFloat("BlendX", 0);
-
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            mAnim.SetFloat("BlendX", 1);
-            mAnim.SetFloat("BlendY", 0);
-
-        }
-        else if (Input.GetKeyDown(KeyCode.A))
-        {
-            mAnim.SetFloat("BlendX", -1);
-            mAnim.SetFloat("BlendY", 0);
-        }
-
-        if(mMovement.magnitude == 0)
-        {
-            mAnim.SetBool("IsIdle", true);
-        }
-        else
-        {
-            mAnim.SetBool("IsIdle", false);
-        }
-       
-       
+        mAnim.SetFloat("BlendX", xInput);
+        mAnim.SetFloat("BlendY", yInput);
+        
 
         mRigidBody.AddForce(mMovement);
 
