@@ -46,7 +46,7 @@ public class EnemyMovement : MonoBehaviour
             }
        
         }
-        if (mLastKnownPos != new Vector3(0, 0, 0))
+        if (mLastKnownPos != new Vector3(0, 0, 0) && mPlayer.GetComponent<CookieHealth>().HitPoints > 0)
         {
             mNetForce = new Vector2(mLastKnownPos.x - transform.position.x, mLastKnownPos.y - transform.position.y).normalized * mSpeed;
             mRigidBody.AddForce(mNetForce + mWallForce);

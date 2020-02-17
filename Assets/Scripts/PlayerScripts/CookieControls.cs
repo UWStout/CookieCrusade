@@ -20,6 +20,9 @@ public class CookieControls : MonoBehaviour
     [SerializeField]
     private int mSelectedCookie;
 
+    [SerializeField]
+    private GameObject mAttackArea;
+
     /*[SerializeField]
     private GameObject mCookie0;
     [SerializeField]
@@ -35,8 +38,6 @@ public class CookieControls : MonoBehaviour
     private GameObject mSugarProjectile;
     [SerializeField]
     private GameObject mChipProjectile;
-
-   
 
 
     [SerializeField]
@@ -61,50 +62,32 @@ public class CookieControls : MonoBehaviour
         xInput = Input.GetAxis("Horizontal");
         yInput = Input.GetAxis("Vertical");
         mMovement = new Vector2(xInput * mSpeed, yInput * mSpeed);
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            mAnim.SetFloat("BlendY", 1);
-            mAnim.SetFloat("BlendX", 0);
-
-        }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            mAnim.SetFloat("BlendY", -1);
-            mAnim.SetFloat("BlendX", 0);
-
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            mAnim.SetFloat("BlendX", 1);
-            mAnim.SetFloat("BlendY", 0);
-
-        }
-        else if (Input.GetKeyDown(KeyCode.A))
-        {
-            mAnim.SetFloat("BlendX", -1);
-            mAnim.SetFloat("BlendY", 0);
-        }
-
-        if(mMovement.magnitude == 0)
-        {
-            mAnim.SetBool("IsIdle", true);
-        }
-        else
-        {
-            mAnim.SetBool("IsIdle", false);
-        }
-       
-       
+        mAnim.SetFloat("BlendX", xInput);
+        mAnim.SetFloat("BlendY", yInput);
+        
 
         mRigidBody.AddForce(mMovement);
 
+        //Monster Cookie Attack Area Rotation
+        Vector3 mousePos = Input.mousePosition;
+        Vector3 startPos = Camera.main.WorldToScreenPoint(transform.position);
+        mTrajectory = new Vector3(mousePos.x - startPos.x, mousePos.y - startPos.y).normalized;
       
+
+
+
         //Mouse click functionality
         if (Input.GetMouseButtonDown(0))
         {
-           
          
+            if(mTrajectory.y > 0)
+            {
+                mAnim.SetFloat("AimY", 1);
+            }
+            else
+            {
+                mAnim.SetFloat("AimY", -1);
+            }
 
             switch (mSelectedCookie)
             {
