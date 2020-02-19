@@ -990,6 +990,16 @@ PrefabInstance:
       propertyPath: mPlayer
       value: 
       objectReference: {fileID: 1637876902}
+    - target: {fileID: 1630168903471621531, guid: d7b49a162a55d074f95e14e95d2695c3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 232.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630168903471621531, guid: d7b49a162a55d074f95e14e95d2695c3,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -485
+      objectReference: {fileID: 0}
     - target: {fileID: 1630168903528132445, guid: d7b49a162a55d074f95e14e95d2695c3,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1329,6 +1339,16 @@ PrefabInstance:
       propertyPath: next
       value: 
       objectReference: {fileID: 771050654}
+    - target: {fileID: 3094563328890929899, guid: a8191f6a5ea02ba46ac80a60278fbd79,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3094563328890929899, guid: a8191f6a5ea02ba46ac80a60278fbd79,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3094563328890929903, guid: a8191f6a5ea02ba46ac80a60278fbd79,
         type: 3}
       propertyPath: mHeartUI
