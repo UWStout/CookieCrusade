@@ -117,14 +117,14 @@ public class CookieControls : MonoBehaviour
             mSelectedCookie--;
             ValidateBounds();
             mAnim.SetInteger("SelectedCookie", mSelectedCookie);
-            Debug.Log("Selected Cookie: " + mSelectedCookie);
+            GetComponent<CookieCornerUI>().SwitchCookie(mSelectedCookie);
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
             mSelectedCookie++;
             ValidateBounds();
-            Debug.Log("Selected Cookie: " + mSelectedCookie);
             mAnim.SetInteger("SelectedCookie", mSelectedCookie);
+            GetComponent<CookieCornerUI>().SwitchCookie(mSelectedCookie);
         }
         /*
         switch (mSelectedCookie)
