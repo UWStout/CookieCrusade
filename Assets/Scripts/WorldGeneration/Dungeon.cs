@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Dungeon : MonoBehaviour
 {
-    static int maxTriesPerRoom = 10;
+    static int maxTriesPerRoom = 100;
 
     [Header("Map Info")]
     private RoomType[,] map;
@@ -12,41 +12,59 @@ public class Dungeon : MonoBehaviour
     public Vector2Int mapDimensions;
 
     [Header("Generation Info")]
-    public RoomTiles currentTileSet;
+    public TileGenerator tileGenerator;
     public WorldTile startingRoom;
     public WorldTile endingRoom;
 
     public GameObject DebugPrefab;
 
+    public List<GameObject> gs;
+
+    public int generatedRooms = 100;
+    public int zones = 4;
+
     void Start()
     {
-        GenerateMap(1);
-        DebugDraw();
+        gs = new List<GameObject>();
+        GenerateMap(generatedRooms);
     }
 
-    public void DebugDraw()
+    private void Update()
     {
-        for(int x = 0; x < mapDimensions.x; x++)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            for (int y = 0; y < mapDimensions.y; y++)
+            foreach(GameObject g in gs)
             {
-                if (map[x, y] == RoomType.None)
-                {
-                    GameObject g; 
-                    g = Instantiate<GameObject>(DebugPrefab, new Vector3(x * WorldTile.tileDimension, y * WorldTile.tileDimension, 0), Quaternion.identity);
-                }
+                Destroy(g.gameObject);
             }
+            gs.Clear();
+            GenerateMap(generatedRooms);
         }
     }
 
     public void GenerateMap(int rooms)
     {
-        int roomsGenerated = 0;
+        map = new RoomType[mapDimensions.x, mapDimensions.y];
+        map_models = new GameObject[mapDimensions.x, mapDimensions.y];
+        // Rooms to be generated ber section
+        int roomsPerSection = generatedRooms / zones;
 
-        for(int num = 0; num < rooms; num++)
+        //Starting Position
+        GenerateTile(startingRoom, maxTriesPerRoom, true, true);
+
+        //Starting section
+        GenerateSection(roomsPerSection, startingRoom.RoomType, true);
+
+        for(int i = 1; i < zones; i++)
         {
-            WorldTile worldTile = currentTileSet.GetRandomTile();
+            GenerateSection(roomsPerSection);
+        }
 
+<<<<<<< HEAD
+        foreach (GameObject room in map_models)
+        {
+            //code for triggering walls
+=======
             for(int tries = 0; tries < maxTriesPerRoom; tries++){
                 Vector2Int newPosition = new Vector2Int(Random.Range(0, mapDimensions.x), Random.Range(0, mapDimensions.y));
                 if (CheckSpotAvailable(newPosition, worldTile.Dimensions)){
@@ -54,12 +72,43 @@ public class Dungeon : MonoBehaviour
                     break;
                 }
             }
+>>>>>>> a1484810d4e079c1b7432147599138eaf2ce94b1
         }
+    }
 
-        foreach(GameObject room in map_models)
+    public void GenerateSection(int roomsPerSection, RoomType roomType = RoomType.None, bool first = false)
+    {
+        RoomTiles tiles = tileGenerator.RandomRoomType();
+
+        for (int roomsGenerated = 0; roomsGenerated < roomsPerSection;)
         {
+            WorldTile worldTile = tiles.GetRandomTile();
 
+            if (GenerateTile(worldTile, maxTriesPerRoom))
+                roomsGenerated++;
         }
+    }
+
+    /// <summary>
+    /// Generate a tile
+    /// </summary>
+    /// <param name="tile">Tile template being used</param>
+    /// <param name="maxTries">Maximum number of tries, typically 'maxTriesPerRoom'</param>
+    /// <param name="force">Force the placement, ignoring nearby tiles</param>
+    /// <returns></returns>
+    bool GenerateTile(WorldTile tile, int maxTries, bool anyAdjacent = false, bool force = false)
+    {
+        for (int tries = 0; tries < maxTries; tries++)
+        {
+            Vector2Int newPosition = new Vector2Int(Random.Range(0, mapDimensions.x), Random.Range(0, mapDimensions.y));
+            if (CheckSpotAvailable(newPosition, tile.Dimensions, (anyAdjacent || tile.AnyAdjacent) ? RoomType.None : tile.RoomType, force))
+            {
+                AddTileToMap(tile, newPosition);
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /// <summary>
@@ -68,7 +117,7 @@ public class Dungeon : MonoBehaviour
     /// <param name="pos">Position on the map grid, bottom left of the tile</param>
     /// <param name="dimensions">Dimensions of the tile</param>
     /// <returns></returns>
-    bool CheckSpotAvailable(Vector2Int pos, Vector2Int dimensions)
+    bool CheckSpotAvailable(Vector2Int pos, Vector2Int dimensions, RoomType adjacentRoom = RoomType.None, bool forcePlace = false)
     {
         // check if the tile is too big on the x coordinate
         if (pos.x + dimensions.x >= mapDimensions.x)
@@ -79,18 +128,83 @@ public class Dungeon : MonoBehaviour
             return false;
 
         // loop through positions to check for conflict, going from bottom left
-        for(int x = pos.x; x < pos.x+dimensions.x; x++)
+        for (int x = pos.x; x < pos.x + dimensions.x; x++)
         {
-            for (int y = pos.y; y > mapDimensions.y - pos.y + dimensions.y; y--)
+            for (int y = pos.y; y < pos.y + dimensions.y; y++)
             {
-                if(map[x,y] != RoomType.None)
+                if (map[x,y] != RoomType.None)
                 {
                     return false;
                 }
             }
         }
 
-        return true;
+        if (forcePlace)
+            return true;
+        
+        bool adjacent = false;
+
+        //Loop through positions around tile to check for a connected location
+        for(int x = 0; x < dimensions.x; x++)
+        {
+            if(pos.y - 1 >= 0)
+            {
+                if(adjacentRoom == RoomType.None )
+                {
+                    if(map[pos.x + x, pos.y - 1] != RoomType.None)
+                        adjacent = true;
+                } else
+                {
+                    if (map[pos.x + x, pos.y - 1] == adjacentRoom)
+                        adjacent = true;
+                }
+            }
+            if (pos.y + dimensions.y < mapDimensions.y)
+            {
+                if (adjacentRoom == RoomType.None)
+                {
+                    if(map[pos.x + x, pos.y + dimensions.y] != RoomType.None)
+                        adjacent = true;
+                }
+                else
+                {
+                    if (map[pos.x + x, pos.y + dimensions.y] == adjacentRoom)
+                        adjacent = true;
+                }
+            }
+        }
+
+        for (int y = 0; y < dimensions.y; y++)
+        {
+            if (pos.x - 1 >= 0)
+            {
+                if (adjacentRoom == RoomType.None)
+                {
+                    if(map[pos.x - 1, pos.y + y] != RoomType.None)
+                        adjacent = true;
+                }
+                else
+                {
+                    if (map[pos.x - 1, pos.y + y] == adjacentRoom)
+                        adjacent = true;
+                }
+            }
+            if (pos.x + dimensions.x < mapDimensions.x)
+            {
+                if (adjacentRoom == RoomType.None)
+                {
+                    if(map[pos.x + dimensions.x, pos.y + y] != RoomType.None)
+                        adjacent = true;
+                }
+                else
+                {
+                    if (map[pos.x + dimensions.x, pos.y + y] == adjacentRoom)
+                        adjacent = true;
+                }
+            }
+        }
+
+        return adjacent;
     }
 
     
@@ -98,10 +212,11 @@ public class Dungeon : MonoBehaviour
     {
         GameObject g = Instantiate<GameObject>(tile.Prefab);
         g.transform.position = new Vector2(position.x * WorldTile.tileDimension, position.y * WorldTile.tileDimension);
+        gs.Add(g);
 
         for (int x = position.x; x < position.x + tile.Dimensions.x; x++)
         {
-            for (int y = position.y; y > mapDimensions.y - position.y - tile.Dimensions.y; y--)
+            for (int y = position.y; y < position.y + tile.Dimensions.y; y++)
             {
                 map[x, y] = tile.RoomType;
                 map_models[x, y] = g;

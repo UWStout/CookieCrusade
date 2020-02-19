@@ -19,7 +19,7 @@ public class SugarProjectile : MonoBehaviour
 
 
         mSpeed = .3f;
-        Destroy(gameObject, .15f);
+        Destroy(gameObject, .1f);
 
     }
 

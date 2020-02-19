@@ -27,23 +27,18 @@ public class EnemyHealth : MonoBehaviour
         mHitPoints -= hitPoints;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if(collision.tag == "Player")
         {
             Debug.Log("Hit");
-            int knockbackForce = 3000;
-            collision.gameObject.GetComponent<CookieHealth>().DealDamage(1);
+            int knockbackForce = 5000;
+            collision.GetComponent<CookieHealth>().DealDamage(1);
             Vector3 knockbackDirection = collision.transform.position - transform.position;
-            Vector2 knockback = new Vector2(knockbackDirection.x, knockbackDirection.y);
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(knockback * knockbackForce);
+            Vector2 knockback = new Vector2(knockbackDirection.x , knockbackDirection.y);
+            collision.GetComponent<Rigidbody2D>().AddForce(knockback * knockbackForce);
 
 
-        }
-        else if (collision.gameObject.tag == "Projectile")
-        {
-            // do nothing
-            Debug.Log(gameObject.name + " is what hit the enemy");
         }
     }
 }
