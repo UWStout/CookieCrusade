@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 059a9d67db35d864a821a344b46724c5, type: 3}
+  m_Name: OddRoom
+  m_EditorClassIdentifier: 
+  Name: Odd Room
+  Dimensions: {x: 0, y: 0}
+  Prefab: {fileID: 269909918159533134, guid: 664312e94eca0da42baa378529c35bd9, type: 3}
+  RoomType: 2
+  AnyAdjacent: 0

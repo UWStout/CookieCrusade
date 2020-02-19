@@ -23,4 +23,5 @@ public class WorldTile : ScriptableObject
     public Vector2Int Dimensions;
     public GameObject Prefab;
     public RoomType RoomType;
+    public bool AnyAdjacent = false;
 }
