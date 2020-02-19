@@ -97,27 +97,7 @@ public class CookieControls : MonoBehaviour
             ValidateBounds();
         }
 
-        switch (mSelectedCookie)
-        {
-            case 0:
-                mCookie0.SetActive(true);
-                mCookie1.SetActive(false);
-                mCookie2.SetActive(false);
-                break;
-            case 1:
-                mCookie0.SetActive(false);
-                mCookie1.SetActive(true);
-                mCookie2.SetActive(false);
-                break;
-            case 2:
-                mCookie0.SetActive(false);
-                mCookie1.SetActive(false);
-                mCookie2.SetActive(true);
-                break;
-            default:
-                Debug.Log("mSelectedCookie is incorrect");
-                break;
-        }
+        
     }
 
     private void ValidateBounds()
