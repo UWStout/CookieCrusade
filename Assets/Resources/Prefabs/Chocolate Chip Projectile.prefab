@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -9076557303472569709}
   m_Layer: 0
   m_Name: Chocolate Chip Projectile
-  m_TagString: Projectile
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,4 +111,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c61d400cdf453a479bf613fd53911f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrajectory: {x: 0, y: 0, z: 0}

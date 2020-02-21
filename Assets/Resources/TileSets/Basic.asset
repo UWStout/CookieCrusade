@@ -15,3 +15,4 @@ MonoBehaviour:
   roomType: 1
   worldTiles:
   - {fileID: 11400000, guid: 4306f21caad584541a09e462ffa15b71, type: 2}
+  - {fileID: 11400000, guid: 79a04b1f49a6bca418513509a0a171c5, type: 2}
