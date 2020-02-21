@@ -45,6 +45,7 @@ public class Dungeon : MonoBehaviour
 
         for(int num = 0; num < rooms; num++)
         {
+<<<<<<< HEAD
             WorldTile worldTile = currentTileSet.GetRandomTile();
 
             for(int tries = 0; tries < maxTriesPerRoom; tries++){
@@ -55,6 +56,15 @@ public class Dungeon : MonoBehaviour
                 }
             }
         }
+=======
+            GenerateSection(roomsPerSection);
+        }
+    }
+
+    public void GenerateSection(int roomsPerSection, RoomType roomType = RoomType.None, bool first = false)
+    {
+        RoomTiles tiles = tileGenerator.RandomRoomType();
+>>>>>>> michaelTemp
 
         foreach(GameObject room in map_models)
         {

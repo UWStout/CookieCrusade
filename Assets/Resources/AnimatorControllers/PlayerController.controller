@@ -86,6 +86,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+<<<<<<< HEAD
 --- !u!114 &-8224090472813707595
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,6 +121,8 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+=======
+>>>>>>> michaelTemp
 --- !u!1101 &-7623027235031976311
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -156,9 +159,12 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: PlayerAttacks
     m_EventTreshold: 0
+<<<<<<< HEAD
   - m_ConditionMode: 6
     m_ConditionEvent: SelectedCookie
     m_EventTreshold: 1
+=======
+>>>>>>> michaelTemp
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8228994315903905599}
   m_Solo: 0
@@ -173,6 +179,7 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< HEAD
 --- !u!1101 &-4876459815264172697
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -223,6 +230,8 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+=======
+>>>>>>> michaelTemp
 --- !u!114 &-4621216164923033853
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -308,42 +317,77 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
+<<<<<<< HEAD
     m_Motion: {fileID: 7400000, guid: d42f90937b43cba4dbfec63c9dc70736, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 0.5
+=======
+    m_Motion: {fileID: 0}
+    m_Threshold: 0
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+>>>>>>> michaelTemp
     m_CycleOffset: 0
     m_DirectBlendParameter: BlendY
     m_Mirror: 0
   - serializedVersion: 2
+<<<<<<< HEAD
     m_Motion: {fileID: 7400000, guid: da701078c7f5b1a4eba8d91cff3779f6, type: 2}
     m_Threshold: 0.25
     m_Position: {x: -1, y: 0}
     m_TimeScale: 0.5
+=======
+    m_Motion: {fileID: 0}
+    m_Threshold: 0.25
+    m_Position: {x: -1, y: 0}
+    m_TimeScale: 1
+>>>>>>> michaelTemp
     m_CycleOffset: 0
     m_DirectBlendParameter: BlendY
     m_Mirror: 0
   - serializedVersion: 2
+<<<<<<< HEAD
     m_Motion: {fileID: 7400000, guid: cba2f95872573864c9d64247baf1dcfd, type: 2}
     m_Threshold: 0.5
     m_Position: {x: 1, y: 0}
     m_TimeScale: 0.5
+=======
+    m_Motion: {fileID: 0}
+    m_Threshold: 0.5
+    m_Position: {x: 1, y: 0}
+    m_TimeScale: 1
+>>>>>>> michaelTemp
     m_CycleOffset: 0
     m_DirectBlendParameter: BlendY
     m_Mirror: 0
   - serializedVersion: 2
+<<<<<<< HEAD
     m_Motion: {fileID: 7400000, guid: 5096a53610e689f4faa127fe93b965d2, type: 2}
     m_Threshold: 0.75
     m_Position: {x: 0, y: -1}
     m_TimeScale: 0.5
+=======
+    m_Motion: {fileID: 0}
+    m_Threshold: 0.75
+    m_Position: {x: 0, y: -1}
+    m_TimeScale: 1
+>>>>>>> michaelTemp
     m_CycleOffset: 0
     m_DirectBlendParameter: BlendY
     m_Mirror: 0
   - serializedVersion: 2
+<<<<<<< HEAD
     m_Motion: {fileID: 7400000, guid: 27ac3b13f1422ec47b765893b5de9ab1, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: 1}
     m_TimeScale: 0.5
+=======
+    m_Motion: {fileID: 0}
+    m_Threshold: 1
+    m_Position: {x: 0, y: 1}
+    m_TimeScale: 1
+>>>>>>> michaelTemp
     m_CycleOffset: 0
     m_DirectBlendParameter: BlendY
     m_Mirror: 0
@@ -354,6 +398,7 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 1
+<<<<<<< HEAD
 --- !u!206 &-2027935082975462825
 BlendTree:
   m_ObjectHideFlags: 1
@@ -385,6 +430,8 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 2
+=======
+>>>>>>> michaelTemp
 --- !u!1101 &-1751000632093741961
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -396,9 +443,12 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: PlayerAttacks
     m_EventTreshold: 0
+<<<<<<< HEAD
   - m_ConditionMode: 6
     m_ConditionEvent: SelectedCookie
     m_EventTreshold: 0
+=======
+>>>>>>> michaelTemp
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3110100510888474803}
   m_Solo: 0
@@ -477,12 +527,15 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 7975489430579173802}
     m_Position: {x: 400, y: 70, z: 0}
+<<<<<<< HEAD
   - serializedVersion: 1
     m_State: {fileID: 2561160514434988900}
     m_Position: {x: 400, y: -20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4794594772811659165}
     m_Position: {x: 400, y: 180, z: 0}
+=======
+>>>>>>> michaelTemp
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -538,7 +591,10 @@ AnimatorState:
   - {fileID: -5982037526674630852}
   - {fileID: 8850045318704751996}
   - {fileID: -719127109343486644}
+<<<<<<< HEAD
   - {fileID: 386694997294961994}
+=======
+>>>>>>> michaelTemp
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -568,37 +624,61 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
+<<<<<<< HEAD
     m_Controller: {fileID: 9100000}
+=======
+    m_Controller: {fileID: 0}
+>>>>>>> michaelTemp
   - m_Name: BlendY
     m_Type: 1
     m_DefaultFloat: -1
     m_DefaultInt: 0
     m_DefaultBool: 0
+<<<<<<< HEAD
     m_Controller: {fileID: 9100000}
+=======
+    m_Controller: {fileID: 0}
+>>>>>>> michaelTemp
   - m_Name: BlendX
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
+<<<<<<< HEAD
     m_Controller: {fileID: 9100000}
+=======
+    m_Controller: {fileID: 0}
+>>>>>>> michaelTemp
   - m_Name: SelectedCookie
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
+<<<<<<< HEAD
     m_Controller: {fileID: 9100000}
+=======
+    m_Controller: {fileID: 0}
+>>>>>>> michaelTemp
   - m_Name: hasDied
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
+<<<<<<< HEAD
     m_Controller: {fileID: 9100000}
+=======
+    m_Controller: {fileID: 0}
+>>>>>>> michaelTemp
   - m_Name: AimY
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
+<<<<<<< HEAD
     m_Controller: {fileID: 9100000}
+=======
+    m_Controller: {fileID: 0}
+>>>>>>> michaelTemp
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -634,6 +714,7 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< HEAD
 --- !u!1101 &386694997294961994
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -659,6 +740,8 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+=======
+>>>>>>> michaelTemp
 --- !u!206 &1821842855259201653
 BlendTree:
   m_ObjectHideFlags: 1
@@ -670,7 +753,11 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 8263042024ddc0344a8848f847841718, type: 2}
     m_Threshold: 0.25
+<<<<<<< HEAD
     m_Position: {x: 1, y: 0}
+=======
+    m_Position: {x: -1, y: 0}
+>>>>>>> michaelTemp
     m_TimeScale: 0.5
     m_CycleOffset: 0
     m_DirectBlendParameter: BlendY
@@ -678,7 +765,11 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: ce6d097d6510f7b45b6b3ea04e4c2dd9, type: 2}
     m_Threshold: 0.4375
+<<<<<<< HEAD
     m_Position: {x: -1, y: 0}
+=======
+    m_Position: {x: 1, y: 0}
+>>>>>>> michaelTemp
     m_TimeScale: 0.5
     m_CycleOffset: 0
     m_DirectBlendParameter: BlendY
@@ -733,7 +824,11 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 7e40ae7298153384ca34226a2b6b94e9, type: 2}
     m_Threshold: 0.25
+<<<<<<< HEAD
     m_Position: {x: 1, y: 0}
+=======
+    m_Position: {x: -1, y: 0}
+>>>>>>> michaelTemp
     m_TimeScale: 0.5
     m_CycleOffset: 0
     m_DirectBlendParameter: BlendY
@@ -741,7 +836,11 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 6cd8fc5d937d12b49af3fb6c6d14e2b4, type: 2}
     m_Threshold: 0.5
+<<<<<<< HEAD
     m_Position: {x: -1, y: 0}
+=======
+    m_Position: {x: 1, y: 0}
+>>>>>>> michaelTemp
     m_TimeScale: 0.5
     m_CycleOffset: 0
     m_DirectBlendParameter: BlendY
@@ -769,6 +868,7 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 2
+<<<<<<< HEAD
 --- !u!1102 &2561160514434988900
 AnimatorState:
   serializedVersion: 5
@@ -824,6 +924,8 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+=======
+>>>>>>> michaelTemp
 --- !u!1102 &3110100510888474803
 AnimatorState:
   serializedVersion: 5
@@ -874,6 +976,7 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< HEAD
 --- !u!1101 &3906055806501353848
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -899,6 +1002,8 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+=======
+>>>>>>> michaelTemp
 --- !u!1101 &4032498655927780827
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -924,6 +1029,7 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< HEAD
 --- !u!1101 &4346589689691003360
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -977,6 +1083,8 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+=======
+>>>>>>> michaelTemp
 --- !u!1102 &5124867030458731154
 AnimatorState:
   serializedVersion: 5
@@ -991,7 +1099,10 @@ AnimatorState:
   - {fileID: -7623027235031976311}
   - {fileID: 4032498655927780827}
   - {fileID: -1751000632093741961}
+<<<<<<< HEAD
   - {fileID: -4876459815264172697}
+=======
+>>>>>>> michaelTemp
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -1045,11 +1156,15 @@ AnimatorState:
   m_Name: Motion Blend Tree
   m_Speed: 1
   m_CycleOffset: 0
+<<<<<<< HEAD
   m_Transitions:
   - {fileID: 3906055806501353848}
   - {fileID: 2818411388267160192}
   - {fileID: 4346589689691003360}
   - {fileID: -4752893832563430754}
+=======
+  m_Transitions: []
+>>>>>>> michaelTemp
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -1099,6 +1214,7 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 5124867030458731154}
+<<<<<<< HEAD
 --- !u!114 &8530595661340906977
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1111,6 +1227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2818bd6861bb91747b7f5a35d90b883d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> michaelTemp
 --- !u!1101 &8850045318704751996
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

@@ -7,10 +7,7 @@ public enum RoomType
     None,
     Main,
     Vents,
-    Baking,
-    Gingerbread,
-    Oven,
-    Fridge
+    Kitchen
 }
 
 [CreateAssetMenu(menuName = "Generation/Tile")]
