@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaed18a15b0d15c428d6e2c98de599f7, type: 3}
   m_Name: Basic
   m_EditorClassIdentifier: 
-  roomType: 1
   worldTiles:
-  - {fileID: 11400000, guid: 4306f21caad584541a09e462ffa15b71, type: 2}
+  - {fileID: 11400000, guid: f23b517e44f58cd4cb563697a8e13f20, type: 2}
+  - {fileID: 11400000, guid: e6ce11d75ef17d7418d7545bf4d45e76, type: 2}
+  - {fileID: 11400000, guid: 702c1bc68cf9cc040b5feab5daea927a, type: 2}
+  - {fileID: 11400000, guid: 3b457352174d3624d8dcc06d745f57bb, type: 2}

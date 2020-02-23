@@ -215,6 +215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1028294932}
   - component: {fileID: 1028294933}
+  - component: {fileID: 3171711999458278090}
   m_Layer: 0
   m_Name: Left
   m_TagString: Untagged
@@ -286,6 +287,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3171711999458278090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028294931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 731197f93b507334f8481a4976f1618d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectDirection: {x: -1, y: 0}
+  top: 0
 --- !u!1 &1094164461
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1094164462}
   - component: {fileID: 1094164463}
+  - component: {fileID: 4565958184008598077}
   m_Layer: 0
   m_Name: Top
   m_TagString: Untagged
@@ -367,6 +383,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4565958184008598077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094164461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 731197f93b507334f8481a4976f1618d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectDirection: {x: 0, y: 1}
+  top: 1
 --- !u!1 &1182846351
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1278742566}
   - component: {fileID: 1278742567}
+  - component: {fileID: 2596865297500723884}
   m_Layer: 0
   m_Name: Bottom
   m_TagString: Untagged
@@ -532,6 +563,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2596865297500723884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278742565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 731197f93b507334f8481a4976f1618d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectDirection: {x: 0, y: -1}
+  top: 0
 --- !u!1 &1438140142
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +587,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1438140143}
   - component: {fileID: 1438140144}
+  - component: {fileID: 1225473215167550652}
   m_Layer: 0
   m_Name: Right
   m_TagString: Untagged
@@ -613,6 +659,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1225473215167550652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438140142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 731197f93b507334f8481a4976f1618d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectDirection: {x: 1, y: 0}
+  top: 0
 --- !u!1 &1455850443
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,6 +820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 810326228546581838}
+  - component: {fileID: 6386605939530321777}
   m_Layer: 0
   m_Name: BasicRoom
   m_TagString: Untagged
@@ -787,6 +848,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6386605939530321777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4881669531086660266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195b1b2f38d32584c8881bd5532ab4ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myTemplate: {fileID: 0}
+  myPosition: {x: 0, y: 0}
+  doorwayColliders:
+  - {fileID: 1455850445}
+  - {fileID: 570611588}
+  - {fileID: 995114532}
+  - {fileID: 33610108}
+  doorwayFloors:
+  - {fileID: 1094164463}
+  - {fileID: 1438140144}
+  - {fileID: 1278742567}
+  - {fileID: 1028294933}
+  doorMasks:
+  - {fileID: 4657889088016103396}
+  doors:
+  - {fileID: 6066572474403865205}
 --- !u!1 &5724688901837340380
 GameObject:
   m_ObjectHideFlags: 0

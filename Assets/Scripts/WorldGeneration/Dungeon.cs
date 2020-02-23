@@ -63,6 +63,8 @@ public class Dungeon : MonoBehaviour
         foreach (GameObject room in map_models)
         {
             //code for triggering walls
+            if(room != null)
+                room.GetComponent<TileSetup>().Setup(map);
         }
     }
 
@@ -203,6 +205,10 @@ public class Dungeon : MonoBehaviour
     {
         GameObject g = Instantiate<GameObject>(tile.Prefab);
         g.transform.position = new Vector2(position.x * WorldTile.tileDimension, position.y * WorldTile.tileDimension);
+        g.transform.SetParent(this.transform);
+        g.GetComponent<TileSetup>().myTemplate = tile;
+        g.GetComponent<TileSetup>().myPosition = position;
+
         gs.Add(g);
 
         for (int x = position.x; x < position.x + tile.Dimensions.x; x++)

@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 521c424724bf6bb4daa11b76c76b0a5d, type: 3}
-  m_Name: TileGenerator
+  m_Script: {fileID: 11500000, guid: 059a9d67db35d864a821a344b46724c5, type: 3}
+  m_Name: 2x2_Main
   m_EditorClassIdentifier: 
-  tilesets:
-  - {fileID: 11400000, guid: 0248bdf894c896e41b4550e7562eb284, type: 2}
+  Name: 2x2
+  Dimensions: {x: 2, y: 2}
+  Prefab: {fileID: 4321249537230619435, guid: 0e4f313c3c613264583188b25bda9097, type: 3}
+  RoomType: 1
+  AnyAdjacent: 0
