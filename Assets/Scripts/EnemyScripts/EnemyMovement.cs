@@ -18,6 +18,9 @@ public class EnemyMovement : MonoBehaviour
     private Vector2 mNetForce;
     [SerializeField]
     private Vector2 mWallForce;
+
+    [SerializeField]
+    private Animator anim;
   
     [SerializeField]
     private Vector3 mLastKnownPos = new Vector3(0, 0, 0);
@@ -26,11 +29,14 @@ public class EnemyMovement : MonoBehaviour
     {
         mPlayer = GameObject.FindGameObjectWithTag("Player");
         mRigidBody = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        anim.SetFloat("BlendX", mRigidBody.velocity.x);
+        anim.SetFloat("BlendY", mRigidBody.velocity.y);
         //Code for tracking and following the player
         mDistance = mPlayer.transform.position - transform.position;
         if (mDistance.sqrMagnitude < 225)
