@@ -131,6 +131,8 @@ GameObject:
   m_Component:
   - component: {fileID: 18191512}
   - component: {fileID: 18191511}
+  - component: {fileID: 18191514}
+  - component: {fileID: 18191513}
   m_Layer: 0
   m_Name: Dungeon
   m_TagString: Untagged
@@ -152,10 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapDimensions: {x: 20, y: 20}
   tileGenerator: {fileID: 11400000, guid: e1569384e4859f84a90a5a5802d1de12, type: 2}
-  startingRoom: {fileID: 11400000, guid: f23b517e44f58cd4cb563697a8e13f20, type: 2}
-  endingRoom: {fileID: 0}
-  DebugPrefab: {fileID: 4881669531086660266, guid: 41e20f0062c9d12498a6552647bd4fe2,
-    type: 3}
+  startingRoom: {fileID: 11400000, guid: bb09810fea8945e42a0e5cac900496fc, type: 2}
+  endingRoom: {fileID: 11400000, guid: a74dce696a9ed5e4cbcb21fef69b7759, type: 2}
   gs: []
   generatedRooms: 100
   zones: 4
@@ -173,6 +173,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!66 &18191513
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18191510}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths: []
+  m_CompositePaths:
+    m_Paths: []
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
+--- !u!50 &18191514
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18191510}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1841502252
 GameObject:
   m_ObjectHideFlags: 0

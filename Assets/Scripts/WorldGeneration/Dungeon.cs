@@ -16,8 +16,6 @@ public class Dungeon : MonoBehaviour
     public WorldTile startingRoom;
     public WorldTile endingRoom;
 
-    public GameObject DebugPrefab;
-
     public List<GameObject> gs;
 
     public int generatedRooms = 100;
@@ -59,6 +57,9 @@ public class Dungeon : MonoBehaviour
         {
             GenerateSection(roomsPerSection);
         }
+
+        //Ending Position
+        GenerateTile(endingRoom, maxTriesPerRoom, true, true);
 
         foreach (GameObject room in map_models)
         {
