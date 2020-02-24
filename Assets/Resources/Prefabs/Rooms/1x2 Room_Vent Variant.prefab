@@ -101,10 +101,46 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 949a1e353863e8549b0cccd9bcfeeb46,
         type: 3}
+    - target: {fileID: 4176650718874407923, guid: acf033a092f4f1c4cb3c59654bed34fb,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7890443022834159215, guid: 2f034110adebc1b42b716e5a0cc0c97e,
+        type: 3}
     - target: {fileID: 4879323288776799821, guid: acf033a092f4f1c4cb3c59654bed34fb,
         type: 3}
       propertyPath: m_Name
       value: 1x2 Room_Vent Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039269529495579560, guid: acf033a092f4f1c4cb3c59654bed34fb,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039269529495579560, guid: acf033a092f4f1c4cb3c59654bed34fb,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039269529495579560, guid: acf033a092f4f1c4cb3c59654bed34fb,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039269529495579560, guid: acf033a092f4f1c4cb3c59654bed34fb,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039269529495579560, guid: acf033a092f4f1c4cb3c59654bed34fb,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.075
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485581251248265865, guid: acf033a092f4f1c4cb3c59654bed34fb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 18.909
       objectReference: {fileID: 0}
     - target: {fileID: 6385378898386028025, guid: acf033a092f4f1c4cb3c59654bed34fb,
         type: 3}
@@ -118,5 +154,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 949a1e353863e8549b0cccd9bcfeeb46,
         type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6174088333572891429, guid: acf033a092f4f1c4cb3c59654bed34fb, type: 3}
+    - {fileID: 2159923171395906601, guid: acf033a092f4f1c4cb3c59654bed34fb, type: 3}
+    - {fileID: 7918538866937216421, guid: acf033a092f4f1c4cb3c59654bed34fb, type: 3}
+    - {fileID: 1679724214982214224, guid: acf033a092f4f1c4cb3c59654bed34fb, type: 3}
+    - {fileID: 1281822534030307200, guid: acf033a092f4f1c4cb3c59654bed34fb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: acf033a092f4f1c4cb3c59654bed34fb, type: 3}

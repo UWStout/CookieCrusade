@@ -28,7 +28,7 @@ PrefabInstance:
     - target: {fileID: 4040342433379437280, guid: cd64f3757f5b39b4ba72b6582091773b,
         type: 3}
       propertyPath: m_Name
-      value: 2x1 Room_Vent
+      value: 2x1 Room_Vent Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6642316476456606844, guid: cd64f3757f5b39b4ba72b6582091773b,
         type: 3}
@@ -127,5 +127,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -3363379400125451946, guid: 3ae59b1773fe70844acef4ccfeb5c48e,
         type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4247690345597090446, guid: cd64f3757f5b39b4ba72b6582091773b, type: 3}
+    - {fileID: 4751272898875571870, guid: cd64f3757f5b39b4ba72b6582091773b, type: 3}
+    - {fileID: 1470909304915648643, guid: cd64f3757f5b39b4ba72b6582091773b, type: 3}
+    - {fileID: 3648046814375796635, guid: cd64f3757f5b39b4ba72b6582091773b, type: 3}
+    - {fileID: 1843084005091681987, guid: cd64f3757f5b39b4ba72b6582091773b, type: 3}
+    - {fileID: 3784715182864848863, guid: cd64f3757f5b39b4ba72b6582091773b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cd64f3757f5b39b4ba72b6582091773b, type: 3}
