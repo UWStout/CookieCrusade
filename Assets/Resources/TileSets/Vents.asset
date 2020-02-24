@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Vents
   m_EditorClassIdentifier: 
   worldTiles:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 40b3170c0fe9cf643aa58931bcff21fd, type: 2}
+  - {fileID: 11400000, guid: 58db9661882bd7f4ab12d841fcdcefa8, type: 2}
+  - {fileID: 11400000, guid: 1ea39b08e63e8454099b46a8db552f2b, type: 2}
+  - {fileID: 11400000, guid: ae15731ecf7beb24c963422b3f4c1ea4, type: 2}

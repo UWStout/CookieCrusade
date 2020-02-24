@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 059a9d67db35d864a821a344b46724c5, type: 3}
   m_Name: 2x1_Vent
   m_EditorClassIdentifier: 
-  Name: 
-  Dimensions: {x: 1, y: 1}
-  Prefab: {fileID: 0}
+  Name: 2x1 Vent
+  Dimensions: {x: 2, y: 1}
+  Prefab: {fileID: 7254177087681639232, guid: cfc172dde73e816468064c71741b8663, type: 3}
   RoomType: 2
-  AnyAdjacent: 0
+  AnyAdjacent: 1

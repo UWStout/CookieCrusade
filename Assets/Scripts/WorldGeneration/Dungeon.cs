@@ -62,12 +62,11 @@ public class Dungeon : MonoBehaviour
     {
         RoomTiles tiles = tileGenerator.RandomRoomType();
 
-        for (int roomsGenerated = 0; roomsGenerated < roomsPerSection;)
+        for (int roomsGenerated = 0; roomsGenerated < roomsPerSection; roomsGenerated++)
         {
             WorldTile worldTile = tiles.GetRandomTile();
 
-            if (GenerateTile(worldTile, maxTriesPerRoom))
-                roomsGenerated++;
+            GenerateTile(worldTile, maxTriesPerRoom);
         }
     }
 
