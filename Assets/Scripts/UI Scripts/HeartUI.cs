@@ -23,6 +23,9 @@ public class HeartUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (mPlayer == null)
+            mPlayer = GameObject.FindGameObjectWithTag("Player");
+
         mHealthPoints = mPlayer.GetComponent<CookieHealth>().HitPoints;
         for (int i = 0; i < mHearts.Length; i++)
         {

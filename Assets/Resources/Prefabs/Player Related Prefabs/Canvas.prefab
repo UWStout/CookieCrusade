@@ -98,7 +98,8 @@ MonoBehaviour:
   - {fileID: 1630168904610780865}
   - {fileID: 1630168903528132444}
   - {fileID: 1630168903856528233}
-  mFullHeart: {fileID: 21300000, guid: 86bda496a627cf847b84b58d5994db6f, type: 3}
+  mFullHeart: {fileID: -6927015734343022965, guid: 2f034110adebc1b42b716e5a0cc0c97e,
+    type: 3}
   mEmptyHeart: {fileID: 21300000, guid: ac6506c891caa4d42a13439fd8d11e5a, type: 3}
   mPlayer: {fileID: 0}
 --- !u!114 &1630168903471621530

@@ -20,6 +20,8 @@ public class CookieHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mHeartUI = GameObject.Find("Health Panel").GetComponent<HeartUI>();
+
         if(mHitPoints == 0)
         {
             mHitPoints = 5;

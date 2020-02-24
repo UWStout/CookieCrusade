@@ -22,7 +22,8 @@ public class CookieCornerUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        prev = GameObject.Find("Previous Cookie").GetComponent<Image>();
+        next = GameObject.Find("Next Cookie").GetComponent<Image>();
     }
 
     // Update is called once per frame
