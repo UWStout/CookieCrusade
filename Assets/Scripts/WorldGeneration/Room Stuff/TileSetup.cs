@@ -32,7 +32,6 @@ public class TileSetup : MonoBehaviour
                 {
                     doorwayColliders[i].enabled = true;
                 }
-                doorwayColliders[i].usedByComposite = true;
                 doorwayFloors[i].enabled = false;
             }
         }

@@ -46,7 +46,7 @@ public class Dungeon : MonoBehaviour
         }
 
         //Ending Position
-        GenerateTile(endingRoom, maxTriesPerRoom, true, true);
+        GenerateTile(endingRoom, maxTriesPerRoom, true);
 
         foreach (GameObject room in map_models)
         {
