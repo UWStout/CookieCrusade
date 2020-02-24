@@ -18,7 +18,8 @@ public class EnemyGeneration : MonoBehaviour
         for(int i = 0; i < enemies; i++)
         {
             Vector2 pos = new Vector2(Random.Range(lowerBounds.x, upperBounds.x), Random.Range(lowerBounds.y, upperBounds.y));
-            GameObject g = GameObject.Instantiate<GameObject>(enemyList.RandomEnemy(), pos, Quaternion.identity, this.transform);
+            print(pos);
+            GameObject g = GameObject.Instantiate<GameObject>(enemyList.RandomEnemy(), pos, Quaternion.identity, this.transform.parent);
             g.transform.localPosition = pos;
         }
     }
