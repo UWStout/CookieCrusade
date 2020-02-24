@@ -23,7 +23,6 @@ public class TileSetup : MonoBehaviour
                 map[s.myAdjacent.x, s.myAdjacent.y] == RoomType.None
                 )
             {
-                Debug.Log(s.myAdjacent);
                 if (s.top)
                 {
                     doors[i].enabled = false;
@@ -37,5 +36,8 @@ public class TileSetup : MonoBehaviour
                 doorwayFloors[i].enabled = false;
             }
         }
+
+        if(GetComponentInChildren<EnemyGeneration>() != null)
+            GetComponentInChildren<EnemyGeneration>().GenerateEnemies();
     }
 }

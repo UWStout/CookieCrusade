@@ -27,19 +27,6 @@ public class Dungeon : MonoBehaviour
         GenerateMap(generatedRooms);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            foreach (GameObject g in gs)
-            {
-                Destroy(g.gameObject);
-            }
-            gs.Clear();
-            GenerateMap(generatedRooms);
-        }
-    }
-
     public void GenerateMap(int rooms)
     {
         map = new RoomType[mapDimensions.x, mapDimensions.y];
@@ -64,8 +51,10 @@ public class Dungeon : MonoBehaviour
         foreach (GameObject room in map_models)
         {
             //code for triggering walls
-            if(room != null)
+            if (room != null)
+            {
                 room.GetComponent<TileSetup>().Setup(map);
+            }
         }
     }
 
